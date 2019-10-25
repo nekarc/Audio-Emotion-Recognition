@@ -5,8 +5,12 @@ output: html_document
 
 ```{r}
 setwd("C:/Users/grees/OneDrive/Documents/Computer Science/Data Analytics/Audio-Emotion-Recognition")
-prc<-read.csv("details.csv", stringsAsFactors = FALSE)
+prc<-read.csv("extractedData/details.csv", stringsAsFactors = FALSE)
 str(prc)
 table(prc$emotion)
+normalize <- function(x) {
+return ((x - min(x)) / (max(x) - min(x))) }
+
+prc_n <- as.data.frame(lapply(prc[4:17], normalize))
 ```
 
