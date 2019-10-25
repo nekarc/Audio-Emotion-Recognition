@@ -8,7 +8,7 @@ library(scorer)
 library(glmnet)
 library(readr)
 
-audioFeatureData1 <- read.csv('C:/Users/AryaRajivChaloli/Desktop/GITHUB_AryaRajivChaloli/Rough/Datasets/details.csv')
+audioFeatureData1 <- read.csv('../../extractedData/details.csv')
 
 
 isQuant <- function(x) {
