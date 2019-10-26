@@ -1,0 +1,45 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r}
+install.packages("class")
+install.packages("gmodels")
+install.packages("caret")
+library(caret)
+library(class)
+library(gmodels)
+```
+
+
+```{r}
+setwd("C:/Users/grees/OneDrive/Documents/Computer Science/Data Analytics/Audio-Emotion-Recognition")
+prc<-read.csv("extractedData/details.csv", stringsAsFactors = FALSE)
+str(prc)
+table(prc$emotion)
+normalize <- function(x) {
+return ((x - min(x)) / (max(x) - min(x))) }
+
+prc_n <- as.data.frame(lapply(prc[4:17], normalize))
+summary(prc_n$cont_mn)
+
+set.seed(123)
+dat <- sample(1:nrow(prc_n),size=nrow(prc_n)*0.9,replace = FALSE)
+
+prc_train1<- prc_n[dat,] # 70% training data
+prc_test1<- prc_n[-dat,]
+
+#prc_train <- prc_n[1:1340,]
+#prc_test <- prc_n[1340:1440,]
+
+prc_train_labels <- prc[dat,1]
+prc_test_labels <- prc[-dat,1]
+
+prc_test_pred <- knn(train = prc_train1, test = prc_test1,cl = prc_train_labels, k=30)
+acc <- 100 * sum(prc_test_labels == prc_test_pred)/NROW(prc_test1)
+acc
+confusionMatrix(table(prc_test_labels,prc_test_pred))
+CrossTable(x=prc_test_labels, y=prc_test_pred, prop.chisq = FALSE)
+```
+
