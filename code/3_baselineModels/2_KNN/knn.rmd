@@ -16,13 +16,12 @@ library(gmodels)
 ```{r}
 setwd("C:/Users/grees/OneDrive/Documents/Computer Science/Data Analytics/Audio-Emotion-Recognition")
 prc<-read.csv("extractedData/details.csv", stringsAsFactors = FALSE)
-str(prc)
+#str(prc)
 table(prc$emotion)
 normalize <- function(x) {
 return ((x - min(x)) / (max(x) - min(x))) }
-
 prc_n <- as.data.frame(lapply(prc[4:17], normalize))
-summary(prc_n$cont_mn)
+#summary(prc_n$cont_mn)
 
 set.seed(123)
 dat <- sample(1:nrow(prc_n),size=nrow(prc_n)*0.9,replace = FALSE)
