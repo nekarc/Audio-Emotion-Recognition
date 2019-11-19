@@ -16,7 +16,7 @@ from sklearn.model_selection import cross_val_score
 
 
 
-df = pd.read_csv('C:/Users/grees/OneDrive/Documents/Computer Science/Data Analytics/Audio-Emotion-Recognition/extractedData/details.csv')
+df = pd.read_csv('../../../extractedData/details.csv')
 
 X = df[list(df.columns)[3:]]
 y = df['gender']
