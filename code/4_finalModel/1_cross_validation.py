@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Nov 19 19:58:10 2019
-
-@author: Greeshma
-"""
-
 import os
 import numpy as np
 import pandas as pd
@@ -19,7 +12,7 @@ from sklearn.model_selection import cross_val_score
 df = pd.read_csv('../../../extractedData/details.csv')
 
 X = df[list(df.columns)[3:]]
-y = df['gender']
+y = df['emotion']
 X = np.asarray(X)
 y = np.asarray(y)
 X.shape, y.shape
@@ -37,4 +30,3 @@ scores
 
 print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()))
 print(classification_report(y_test,predictions))
-
