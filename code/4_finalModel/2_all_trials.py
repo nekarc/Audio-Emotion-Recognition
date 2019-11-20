@@ -69,8 +69,4 @@ bagging = BaggingClassifier(DecisionTreeClassifier(), max_samples=0.3, max_featu
 scores6 = cross_val_score(bagging, X, y, cv=10)
 print(scores6.mean())
 
-    #scores[i] = max(scores1[i], scores2[i], scores3[i], scores4[i], scores5[i], scores6[i])
-#scores
-#print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std()))
-#print(classification_report(y_test,predictions))
 
