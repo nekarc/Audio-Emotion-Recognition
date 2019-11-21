@@ -43,7 +43,7 @@ scores1 = cross_val_score(dtree, X, y, cv=10)
 print("Accuracy: %0.2f (+/- %0.2f)" % (scores1.mean(), scores1.std()))
 
 #random forest classifier
-rfor = RandomForestClassifier(n_estimators=10)
+rfor = RandomForestClassifier(n_estimators=10, random_state=45  )
 rfor = rfor.fit(X_train, y_train)
 predictions2 = rfor.predict(X_test)
 print(classification_report(y_test,predictions2))
