@@ -4,8 +4,6 @@ Created on Tue Nov 19 19:58:10 2019
 
 @author: Greeshma
 """
-
-import os
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -19,7 +17,6 @@ from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.ensemble import BaggingClassifier
-from sklearn.neighbors import KNeighborsClassifier
 
 df = pd.read_csv('C:/Users/grees/OneDrive/Documents/Computer Science/Data Analytics/Audio-Emotion-Recognition/extractedData/details.csv')
 
