@@ -13115,7 +13115,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13131,6 +13131,7 @@ div#notebook {
 <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">AdaBoostClassifier</span>
 <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">GradientBoostingClassifier</span>
 <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">BaggingClassifier</span>
+<span class="kn">from</span> <span class="nn">xgboost</span> <span class="k">import</span> <span class="n">XGBClassifier</span>
 </pre></div>
 
     </div>
@@ -13140,7 +13141,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C:/Users/grees/OneDrive/Documents/Computer Science/Data Analytics/Audio-Emotion-Recognition/extractedData/details.csv&#39;</span><span class="p">)</span>
@@ -13153,7 +13154,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)[</span><span class="mi">3</span><span class="p">:]]</span> <span class="c1">#to get the relevant columnns (tonnetz, MFCC, chroma etc.)</span>
@@ -13168,30 +13169,10 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>((1440, 14), (1440,))</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
@@ -13205,7 +13186,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#decision tree classifier</span>
@@ -13236,29 +13217,29 @@ div#notebook {
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>              precision    recall  f1-score   support
 
-         1.0       0.27      0.18      0.22        22
-         2.0       0.55      0.55      0.55        56
-         3.0       0.25      0.31      0.28        42
-         4.0       0.28      0.30      0.29        50
-         5.0       0.40      0.50      0.45        50
-         6.0       0.42      0.51      0.46        39
-         7.0       0.39      0.30      0.34        46
-         8.0       0.32      0.22      0.26        55
+         1.0       0.24      0.18      0.21        22
+         2.0       0.57      0.46      0.51        56
+         3.0       0.23      0.26      0.25        42
+         4.0       0.35      0.36      0.35        50
+         5.0       0.34      0.48      0.40        50
+         6.0       0.32      0.41      0.36        39
+         7.0       0.29      0.26      0.27        46
+         8.0       0.37      0.24      0.29        55
 
-   micro avg       0.37      0.37      0.37       360
-   macro avg       0.36      0.36      0.36       360
-weighted avg       0.37      0.37      0.37       360
+   micro avg       0.34      0.34      0.34       360
+   macro avg       0.34      0.33      0.33       360
+weighted avg       0.35      0.34      0.34       360
 
 Confusion matrix for decision trees:
-[[ 4  6  1  6  0  1  3  1]
- [ 5 31  5 11  2  0  0  2]
- [ 0  1 13  4 12  1  5  6]
- [ 3 12  7 15  3  4  4  2]
- [ 1  0  6  4 25  6  3  5]
- [ 0  2  8  3  1 20  1  4]
- [ 0  1  6  3  8  8 14  6]
- [ 2  3  6  7 11  8  6 12]]
-Accuracy: 0.28 (+/- 0.05)
+[[ 4  4  1  5  1  3  2  2]
+ [ 6 26  4 12  2  2  1  3]
+ [ 0  0 11  3 13  2  7  6]
+ [ 3 11  5 18  3  4  5  1]
+ [ 1  0  5  5 24  7  6  2]
+ [ 0  2 10  2  6 16  2  1]
+ [ 0  3  5  3  8  8 12  7]
+ [ 3  0  6  4 14  8  7 13]]
+Accuracy: 0.27 (+/- 0.05)
 </pre>
 </div>
 </div>
@@ -13269,11 +13250,11 @@ Accuracy: 0.28 (+/- 0.05)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#random forest classifier</span>
-<span class="n">rfor</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">randome_state</span> <span class="o">=</span> <span class="mi">45</span><span class="p">)</span>
+<span class="n">rfor</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">45</span><span class="p">)</span>
 <span class="n">rfor</span> <span class="o">=</span> <span class="n">rfor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="n">predictions2</span> <span class="o">=</span> <span class="n">rfor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">predictions2</span><span class="p">))</span>
@@ -13300,29 +13281,29 @@ Accuracy: 0.28 (+/- 0.05)
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>              precision    recall  f1-score   support
 
-         1.0       0.22      0.27      0.24        22
-         2.0       0.48      0.54      0.51        56
-         3.0       0.27      0.40      0.32        42
-         4.0       0.36      0.36      0.36        50
-         5.0       0.52      0.56      0.54        50
-         6.0       0.47      0.44      0.45        39
-         7.0       0.26      0.20      0.22        46
-         8.0       0.44      0.25      0.32        55
+         1.0       0.27      0.32      0.29        22
+         2.0       0.53      0.73      0.62        56
+         3.0       0.27      0.43      0.33        42
+         4.0       0.31      0.26      0.28        50
+         5.0       0.58      0.50      0.54        50
+         6.0       0.57      0.51      0.54        39
+         7.0       0.29      0.22      0.25        46
+         8.0       0.50      0.33      0.40        55
 
-   micro avg       0.39      0.39      0.39       360
-   macro avg       0.38      0.38      0.37       360
-weighted avg       0.39      0.39      0.38       360
+   micro avg       0.42      0.42      0.42       360
+   macro avg       0.42      0.41      0.41       360
+weighted avg       0.43      0.42      0.42       360
 
 Confusion matrix for random forest:
-[[ 6  6  3  4  0  0  1  2]
- [ 7 30  2 12  1  0  3  1]
- [ 1  3 17  1  9  3  7  1]
- [ 3 11  9 18  0  1  2  6]
- [ 0  1  7  2 28  6  4  2]
- [ 1  2  9  2  3 17  3  2]
- [ 4  8  8  5  5  3  9  4]
- [ 5  1  9  6  8  6  6 14]]
-Accuracy: 0.30 (+/- 0.02)
+[[ 7  9  2  2  0  0  2  0]
+ [ 3 41  0  9  0  0  3  0]
+ [ 2  2 18  2  4  8  3  3]
+ [ 4 17  6 13  2  1  3  4]
+ [ 1  0 10  2 25  1  6  5]
+ [ 2  0  7  3  4 20  1  2]
+ [ 4  4 13  6  3  2 10  4]
+ [ 3  4 11  5  5  3  6 18]]
+Accuracy: 0.31 (+/- 0.02)
 </pre>
 </div>
 </div>
@@ -13333,11 +13314,17 @@ Accuracy: 0.30 (+/- 0.02)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Extra trees classifier</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">ExtraTreesClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">min_samples_split</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">predictions6</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">accuracy</span><span class="o">=</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">predictions6</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Confusion matrix for Extra Trees Classifier:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">predictions2</span><span class="p">))</span>
 <span class="n">scores3</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Accuracy for Extra Trees: </span><span class="si">%0.2f</span><span class="s2"> (+/- </span><span class="si">%0.2f</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">scores3</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">scores3</span><span class="o">.</span><span class="n">std</span><span class="p">()))</span>
 </pre></div>
@@ -13356,8 +13343,32 @@ Accuracy: 0.30 (+/- 0.02)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Accuracy for Extra Trees: 0.29 (+/- 0.02)
+<pre>              precision    recall  f1-score   support
+
+         1.0       0.35      0.50      0.42        22
+         2.0       0.48      0.59      0.53        56
+         3.0       0.18      0.24      0.20        42
+         4.0       0.28      0.22      0.24        50
+         5.0       0.47      0.52      0.50        50
+         6.0       0.36      0.41      0.39        39
+         7.0       0.35      0.24      0.29        46
+         8.0       0.33      0.20      0.25        55
+
+   micro avg       0.36      0.36      0.36       360
+   macro avg       0.35      0.36      0.35       360
+weighted avg       0.36      0.36      0.35       360
+
+Confusion matrix for Extra Trees Classifier:
+[[ 7  9  2  2  0  0  2  0]
+ [ 3 41  0  9  0  0  3  0]
+ [ 2  2 18  2  4  8  3  3]
+ [ 4 17  6 13  2  1  3  4]
+ [ 1  0 10  2 25  1  6  5]
+ [ 2  0  7  3  4 20  1  2]
+ [ 4  4 13  6  3  2 10  4]
+ [ 3  4 11  5  5  3  6 18]]
+
+Accuracy for Extra Trees: 0.31 (+/- 0.02)
 </pre>
 </div>
 </div>
@@ -13368,11 +13379,17 @@ Accuracy for Extra Trees: 0.29 (+/- 0.02)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#AdaBoost Classifier</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">AdaBoostClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">predictions7</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">accuracy</span><span class="o">=</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">predictions7</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Confusion matrix for AdaBoost Classifier:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">predictions2</span><span class="p">))</span>
 <span class="n">scores4</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Accuracy for AdaBoost: </span><span class="si">%0.2f</span><span class="s2"> (+/- </span><span class="si">%0.2f</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">scores4</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">scores4</span><span class="o">.</span><span class="n">std</span><span class="p">()))</span>
 </pre></div>
@@ -13391,7 +13408,31 @@ Accuracy for Extra Trees: 0.29 (+/- 0.02)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>
+<pre>              precision    recall  f1-score   support
+
+         1.0       0.00      0.00      0.00        22
+         2.0       0.46      0.62      0.53        56
+         3.0       0.08      0.07      0.08        42
+         4.0       0.27      0.20      0.23        50
+         5.0       0.32      0.74      0.45        50
+         6.0       0.08      0.05      0.06        39
+         7.0       0.30      0.39      0.34        46
+         8.0       0.67      0.07      0.13        55
+
+   micro avg       0.30      0.30      0.30       360
+   macro avg       0.27      0.27      0.23       360
+weighted avg       0.31      0.30      0.26       360
+
+Confusion matrix for AdaBoost Classifier:
+[[ 7  9  2  2  0  0  2  0]
+ [ 3 41  0  9  0  0  3  0]
+ [ 2  2 18  2  4  8  3  3]
+ [ 4 17  6 13  2  1  3  4]
+ [ 1  0 10  2 25  1  6  5]
+ [ 2  0  7  3  4 20  1  2]
+ [ 4  4 13  6  3  2 10  4]
+ [ 3  4 11  5  5  3  6 18]]
+
 Accuracy for AdaBoost: 0.27 (+/- 0.03)
 </pre>
 </div>
@@ -13403,7 +13444,7 @@ Accuracy for AdaBoost: 0.27 (+/- 0.03)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Gradient boosting classifier</span>
@@ -13467,11 +13508,17 @@ Accuracy: 0.32 (+/- 0.03)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Bagging using Decision Trees</span>
 <span class="n">bagging</span> <span class="o">=</span> <span class="n">BaggingClassifier</span><span class="p">(</span><span class="n">DecisionTreeClassifier</span><span class="p">(),</span> <span class="n">max_samples</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span> <span class="c1">#more dependent on features than samples</span>
+<span class="n">bagging</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">predictions3</span> <span class="o">=</span> <span class="n">bagging</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">accuracy</span><span class="o">=</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">predictions3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Confusion matrix for bagging with Decision Trees:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">predictions3</span><span class="p">))</span>
 <span class="n">scores6</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">bagging</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Accuracy after bagging with Decision Trees: </span><span class="si">%0.2f</span><span class="s2"> (+/- </span><span class="si">%0.2f</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">scores6</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">scores6</span><span class="o">.</span><span class="n">std</span><span class="p">()))</span>
 </pre></div>
@@ -13490,8 +13537,95 @@ Accuracy: 0.32 (+/- 0.03)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Accuracy after bagging with Decision Trees: 0.31 (+/- 0.04)
+<pre>              precision    recall  f1-score   support
+
+         1.0       0.20      0.23      0.21        22
+         2.0       0.49      0.66      0.56        56
+         3.0       0.30      0.31      0.30        42
+         4.0       0.33      0.26      0.29        50
+         5.0       0.47      0.56      0.51        50
+         6.0       0.37      0.41      0.39        39
+         7.0       0.28      0.28      0.28        46
+         8.0       0.38      0.20      0.26        55
+
+   micro avg       0.38      0.38      0.38       360
+   macro avg       0.35      0.36      0.35       360
+weighted avg       0.37      0.38      0.37       360
+
+Confusion matrix for bagging with Decision Trees:
+[[ 5 10  1  3  1  0  2  0]
+ [ 6 37  0  9  0  2  2  0]
+ [ 2  1 13  0  9  7  6  4]
+ [ 1 18  4 13  3  3  5  3]
+ [ 0  1  9  2 28  5  2  3]
+ [ 1  1  7  5  4 16  2  3]
+ [ 5  4  6  4  5  4 13  5]
+ [ 5  3  4  3  9  6 14 11]]
+
+Accuracy after bagging with Decision Trees: 0.29 (+/- 0.03)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">xg</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">()</span>
+<span class="n">xg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">predictions4</span> <span class="o">=</span> <span class="n">xg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">accuracy</span><span class="o">=</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">predictions4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Confusion matrix for decision trees:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">predictions4</span><span class="p">))</span>
+<span class="n">scores7</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">xg</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy: </span><span class="si">%0.2f</span><span class="s2"> (+/- </span><span class="si">%0.2f</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">scores7</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">scores7</span><span class="o">.</span><span class="n">std</span><span class="p">()))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>              precision    recall  f1-score   support
+
+         1.0       0.33      0.27      0.30        22
+         2.0       0.49      0.66      0.56        56
+         3.0       0.27      0.36      0.31        42
+         4.0       0.40      0.34      0.37        50
+         5.0       0.54      0.52      0.53        50
+         6.0       0.59      0.41      0.48        39
+         7.0       0.32      0.35      0.33        46
+         8.0       0.47      0.36      0.41        55
+
+   micro avg       0.42      0.42      0.42       360
+   macro avg       0.43      0.41      0.41       360
+weighted avg       0.43      0.42      0.42       360
+
+Confusion matrix for decision trees:
+[[ 6  9  0  3  0  0  4  0]
+ [ 3 37  1  8  0  0  7  0]
+ [ 1  3 15  4  9  1  5  4]
+ [ 1 16  3 17  0  3  4  6]
+ [ 0  1 11  0 26  2  4  6]
+ [ 1  3  6  4  4 16  2  3]
+ [ 2  6  8  6  3  1 16  4]
+ [ 4  1 11  1  6  4  8 20]]
+Accuracy: 0.33 (+/- 0.04)
 </pre>
 </div>
 </div>
