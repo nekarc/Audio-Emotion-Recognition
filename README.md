@@ -36,6 +36,6 @@ The intermediatory extracted data is stored in the [extractedData](https://githu
 
 ## Authors
 **TEAM : #LRHC**
-* Arya Rajiv Chaloli
-* Greeshma Karanth
-* Shivangi Gupta
+* [Arya Rajiv Chaloli](https://github.com/AryaRajivChaloli)
+* [Greeshma Karanth](https://github.com/GreeshmaKaranth)
+* [Shivangi Gupta](https://github.com/shivangi1299)
