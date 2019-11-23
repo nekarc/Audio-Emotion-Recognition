@@ -6,9 +6,9 @@ Audio emotion analysis is a process developed to extract features from audio cli
 
 ## Demo
 
-The demo of the proposed model can be visualized in the [DEMO.py](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/DEMO) folder.
+The demo of the proposed model can be visualized in the [DEMO](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/DEMO) folder.
 
-**NOTE** : Just run the [Demo.ipynb](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/DEMO/Demo.ipynb) file.
+**NOTE** : Just download the [DEMO](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/DEMO) folder and run the [Demo.ipynb](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/DEMO/Demo.ipynb) file.
 
 ## Final Model
 
