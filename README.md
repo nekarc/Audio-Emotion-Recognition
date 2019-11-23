@@ -23,13 +23,13 @@ It contains the following folders:
 * [dataExtraction](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/1_dataExtraction) : Code that helps extract the useful features of the audio data (lang: Python)
 * [visualisations](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/2_visualisations) : Visualisations drawn form the extracted features (lang: R)
 * [baselineModels](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/3_baselineModels) : 
-	a. [decisionTrees](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/3_baselineModels/1_decisionTrees) : Implementation of Decision Trees on the extracted Features (lang: Python)
-	b. [KNN](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/3_baselineModels/2_KNN) : Implementation of KNNs on the extracted Features (lang: R)
-	c. [SVM](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/3_baselineModels/3_SVM) : Implementation of SVMs on the extracted Features (lang: R)
+	<br>a. [decisionTrees](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/3_baselineModels/1_decisionTrees) : Implementation of Decision Trees on the extracted Features (lang: Python)
+	<br>b. [KNN](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/3_baselineModels/2_KNN) : Implementation of KNNs on the extracted Features (lang: R)
+	<br>c. [SVM](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/3_baselineModels/3_SVM) : Implementation of SVMs on the extracted Features (lang: R)
 * [finalModel](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/4_finalModel) : 
-	a. [crossValidation](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/1_crossValidation.py) : Cross validation (lang: Python)
-	b. [allTrials](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/2_allTrials.py) : Other Models (lang: Python)
-    c. finalModels : The final model (lang: [Python](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/3_finalModels.ipynb) and [HTML](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/3_finalModels.html))
+	<br>a. [crossValidation](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/1_crossValidation.py) : Cross validation (lang: Python)
+	<br>b. [allTrials](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/2_allTrials.py) : Other Models (lang: Python)
+    <br>c. finalModels : The final model (lang: [Python](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/3_finalModels.ipynb) and [HTML](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/3_finalModels.html))
 * [movingAverages](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/5_movingAverages) : Implementation of Moving Averages (lang: Python)
 
 The intermediatory extracted data is stored in the [extractedData](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/extractedData) folder.
