@@ -18,7 +18,7 @@ from sklearn.ensemble import AdaBoostClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.ensemble import BaggingClassifier
 
-df = pd.read_csv('C:/Users/grees/OneDrive/Documents/Computer Science/Data Analytics/Audio-Emotion-Recognition/extractedData/details.csv')
+df = pd.read_csv('../../../extractedData/details.csv')
 
 X = df[list(df.columns)[3:]] #to get the relevant columnns (tonnetz, MFCC, chroma etc.)
 X = preprocessing.normalize(X) #to normalize the data

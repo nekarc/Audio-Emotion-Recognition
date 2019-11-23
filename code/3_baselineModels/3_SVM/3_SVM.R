@@ -1,7 +1,7 @@
-install.packages("caret")
+#install.packages("caret")
 library(caret)
 
-dataset <- read.csv('C:/Users/SHIVANGI GUPTA/Documents/College PDFs/Sem-V/Elective 2- Data Analytics/Audio-Emotion-Recognition-master/details.csv', stringsAsFactors = FALSE, sep = ',')
+dataset <- read.csv('../../../extractedData/details.csv', stringsAsFactors = FALSE, sep = ',')
 
 dataset1<- dataset[-2]
 dataset2<- dataset1[-2]

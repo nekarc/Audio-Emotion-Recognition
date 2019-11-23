@@ -4,9 +4,9 @@ output: html_document
 ---
 
 ```{r}
-install.packages("class")
-install.packages("gmodels")
-install.packages("caret")
+# install.packages("class")
+# install.packages("gmodels")
+# install.packages("caret")
 library(caret)
 library(class)
 library(gmodels)
@@ -14,8 +14,7 @@ library(gmodels)
 
 
 ```{r}
-setwd("C:/Users/grees/OneDrive/Documents/Computer Science/Data Analytics/Audio-Emotion-Recognition")
-prc<-read.csv("extractedData/details.csv", stringsAsFactors = FALSE)
+prc<-read.csv("../../../extractedData/details.csv", stringsAsFactors = FALSE)
 #str(prc)
 table(prc$emotion)
 normalize <- function(x) {
