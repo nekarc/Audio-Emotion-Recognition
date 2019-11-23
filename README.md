@@ -1,6 +1,6 @@
 # Audio Emotion Recognition
 
-Audio emotion analysis is a process developed to extract features from audio clips and classify the emotion of the speaker. The data-set chosen is extracted from the The Ryerson Audio Visual Databaseof Emotional Speech and Song ([RAVDESS](https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio)).This project uses many different approaches to classify speech snippets into eight different emotions - *Neutral, Calm, Happy, Sad, Angry, Fearful, Disgust, Surprised* - after pre-processing the extracted data.
+Audio emotion analysis is a process developed to extract features from audio clips and classify the emotion of the speaker. The data-set chosen is extracted from the The Ryerson Audio Visual Databaseof Emotional Speech and Song ([RAVDESS](https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio)). This project uses many different approaches to classify speech snippets into eight different emotions - *Neutral, Calm, Happy, Sad, Angry, Fearful, Disgust, Surprised* - after pre-processing the extracted data.
 
 **NOTE** : To replicate the entire project, please ensure that the dataset is downloaded from [RAVDESS](https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio) and placed in the [dataset/ravdess](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/dataset/ravdess) folder as done with the sample files that are already present in the folder
 
