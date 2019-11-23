@@ -27,8 +27,8 @@ It contains the following folders:
 	b. [KNN](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/3_baselineModels/2_KNN) : Implementation of KNNs on the extracted Features (lang: R)
 	c. [SVM](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/3_baselineModels/3_SVM) : Implementation of SVMs on the extracted Features (lang: R)
 * [finalModel](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/4_finalModel) : 
-	a. [crossValidation](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/1_cross_validation.py) : Cross validation (lang: Python)
-	b. [allTrials](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/2_all_trials.py) : Other Models (lang: Python)
+	a. [crossValidation](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/1_crossValidation.py) : Cross validation (lang: Python)
+	b. [allTrials](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/2_allTrials.py) : Other Models (lang: Python)
     c. finalModels : The final model (lang: [Python](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/3_finalModels.ipynb) and [HTML](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/3_finalModels.html))
 * [movingAverages](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/5_movingAverages) : Implementation of Moving Averages (lang: Python)
 
