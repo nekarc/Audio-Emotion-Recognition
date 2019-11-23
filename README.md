@@ -35,7 +35,7 @@ It contains the following folders:
 The intermediatory extracted data is stored in the [extractedData](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/extractedData) folder.
 
 ## Authors
-**TEAM : #LRHC**
+**TEAM : #LRHC💥**
 * [Arya Rajiv Chaloli](https://github.com/AryaRajivChaloli)
 * [Greeshma Karanth](https://github.com/GreeshmaKaranth)
 * [Shivangi Gupta](https://github.com/shivangi1299)
