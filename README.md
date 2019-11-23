@@ -16,7 +16,7 @@ The implementation of the final model is present in the [/code/finalModel](https
 
 ## Report
 
-The [project report](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/projectReport) is also included for further details about the project.
+The [project report](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/projectReport.pdf) is also included for further details about the project.
 
 ## Project Tree
 
