@@ -10,7 +10,7 @@ The demo of the proposed model can be visualised in the [DEMO.py](https://github
 
 ## Final Model
 
-The implementation of the final model is present in the '/code/finalModel' folder.
+The implementation of the final model is present in the '[/code/finalModel](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/4_finalModel)' folder.
 
 ## Project Tree
 
