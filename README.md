@@ -6,9 +6,9 @@ Audio emotion analysis is a process developed to extract features from audio cli
 
 ## Demo
 
-The demo of the proposed model can be visualized in the [DEMO](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/DEMO) folder.
+The demo of the proposed model can be visualized in the [DEMO.py](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/DEMO) folder.
 
-**NOTE** : Just download the [DEMO](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/DEMO) folder and run the [Demo.ipynb](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/DEMO/Demo.ipynb) file.
+**NOTE** : Just run the [Demo.ipynb](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/DEMO/Demo.ipynb) file.
 
 ## Final Model
 
@@ -32,6 +32,7 @@ It contains the following folders:
 	<br>a. [decisionTrees](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/3_baselineModels/1_decisionTrees) : Implementation of Decision Trees on the extracted Features (lang: Python)
 	<br>b. [KNN](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/3_baselineModels/2_KNN) : Implementation of KNNs on the extracted Features (lang: R)
 	<br>c. [SVM](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/3_baselineModels/3_SVM) : Implementation of SVMs on the extracted Features (lang: R)
+	<br>d. [ANN](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/3_baselineModels/4_ANN) : Implementation of ANNs on the extracted Features (lang: R)
 * [finalModel](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/4_finalModel) : 
 	<br>a. [crossValidation](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/1_crossValidation.py) : Cross validation (lang: Python)
 	<br>b. [allTrials](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/blob/master/code/4_finalModel/2_allTrials.py) : Other Models (lang: Python)
