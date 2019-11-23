@@ -10,7 +10,7 @@ The demo of the proposed model can be visualised in the [DEMO.py](https://github
 
 ## Final Model
 
-The implementation of the final model is present in the '[/code/finalModel](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/4_finalModel)' folder.
+The implementation of the final model is present in the [/code/finalModel](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/4_finalModel) folder.
 
 ## Project Tree
 
@@ -18,7 +18,7 @@ A sample of the dataset is provided in the dataset/ravdess folder
 
 The papers with reference to the literature survey, are provided in the [litSurvey](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/litSurvey) folder.
 
-The folder named "[code](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code)" contains all the code pertaining to the project.
+The folder named [code](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code) contains all the code pertaining to the project.
 It contains the following folders:
 * [dataExtraction](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/1_dataExtraction) : Code that helps extract the useful features of the audio data (lang: Python)
 * [visualisations](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/2_visualisations) : Visualisations drawn form the extracted features (lang: R)
