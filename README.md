@@ -12,6 +12,10 @@ The demo of the proposed model can be visualised in the [DEMO.py](https://github
 
 The implementation of the final model is present in the [/code/finalModel](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/4_finalModel) folder.
 
+## Report
+
+The [project report](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/projectReport) is also included for further details about the project.
+
 ## Project Tree
 
 A sample of the dataset is provided in the dataset/ravdess folder
@@ -33,8 +37,6 @@ It contains the following folders:
 * [movingAverages](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/code/5_movingAverages) : Implementation of Moving Averages (lang: Python)
 
 The intermediatory extracted data is stored in the [extractedData](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/extractedData) folder.
-
-The [project report](https://github.com/AryaRajivChaloli/Audio-Emotion-Recognition/tree/master/projectReport) is also included for further details about the project.
 
 ## Authors
 **TEAM : #LRHC💥**
